@@ -33,11 +33,8 @@ const Header: React.FC = () => {
           <div className={classes.right}>
             <div className={classes.headerLinks}>
             <Link to="/covid">Covid-19</Link>
-
             <Link to="/">Головна</Link>
-
             <Link to="/foo">Feedback</Link>
-
             <Link to="/bar2">Translate</Link>
             </div>
             <div className={classes.search}>
