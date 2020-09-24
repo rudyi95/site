@@ -39,31 +39,15 @@ const Header: React.FC = () => {
             </Typography>
           </div>
           <div className={classes.right}>
-            <Paper square>
-              <Tabs
-                value={value}
-                indicatorColor="primary"
-                textColor="primary"
-                onChange={handleChange}
-                aria-label="disabled tabs example"
-              >
-                <Link to="/">
-                  <Tab label="Covid-19" />
-                </Link>
+            <div className={classes.headerLinks}>
+            <Link to="/covid">Covid-19</Link>
 
-                <Link to="/bar">
-                  <Tab label="Directory" />
-                </Link>
+            <Link to="/">Головна</Link>
 
-                <Link to="/foo">
-                  <Tab label="Feedback" />
-                </Link>
+            <Link to="/foo">Feedback</Link>
 
-                <Link to="/bar2">
-                  <Tab label="Translate" />
-                </Link>
-              </Tabs>
-            </Paper>
+            <Link to="/bar2">Translate</Link>
+            </div>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
                 <SearchIcon />

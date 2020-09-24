@@ -5,6 +5,7 @@ import {Bar2, Foo, Bar} from './Routes';
 import MainPage from './Pages/Main';
 import Header from './Components/Header';
 
+import "./App.css";
 
 class App extends React.Component {
   render() {

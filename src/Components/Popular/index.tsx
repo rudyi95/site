@@ -1,11 +1,17 @@
 import React from "react";
 import useStyles from "./style";
+import Photo from '../../Img/photo.jpg';
 
 const Goverment: React.FC = () => {
   const classes: any = useStyles();
 
   return (
     <div className={classes.root}>
+      <div className={classes.image}>
+        <img src={Photo} alt={'Photo'} />
+        <img src={Photo} alt={'Photo'} />
+        <img src={Photo} alt={'Photo'} />
+      </div>
       <div className={classes.containerInfo}>
         Місто Жовква було закладене в 1597 р. на землях давньоруського поселення
         Винники, неподалік древнього міста Щекотів (Щекотин, тепер село Глинсько
@@ -73,6 +79,11 @@ const Goverment: React.FC = () => {
           «Рибонькою» та сандомирським воєводою Яном Тарлом в їх суперечці через
           права на Жовкву.
         </p>
+      </div>
+      <div className={classes.image}>
+        <img src={Photo} alt={'Photo'} />
+        <img src={Photo} alt={'Photo'} />
+        <img src={Photo} alt={'Photo'} />
       </div>
     </div>
   );
