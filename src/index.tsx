@@ -6,6 +6,7 @@ import MainPage from './Pages/Main';
 import Header from './Components/Header';
 import CovidPage from './Pages/Covid';
 
+import "./App.css";
 
 class App extends React.Component {
   render() {
