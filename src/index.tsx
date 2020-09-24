@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import {Bar2, Foo, Bar} from './Routes';
 import MainPage from './Pages/Main';
 import Header from './Components/Header';
+import CovidPage from './Pages/Covid';
 
 import "./App.css";
 
@@ -15,7 +16,7 @@ class App extends React.Component {
           <Header />
           <Switch>
             <Route exact path="/" component={MainPage} />
-            <Route exact path="/foo" component={Foo} />
+            <Route exact path="/covid" component={CovidPage} />
             <Route exact path="/bar" component={Bar} />
             <Route exact path="/bar2" component={Bar2} />
           </Switch>
