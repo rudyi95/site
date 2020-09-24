@@ -1,12 +1,21 @@
 import React from 'react';
-import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import Header from "./Pages/Main";
 import MainPage from "./Pages/Main";
+
+import "./App.css";
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <MainPage />
-    </div>
+    <Router>
+        <Header />
+        <Switch>
+          <Route path="/">
+            <MainPage />
+          </Route>
+        </Switch>
+    </Router>
   );
 };
 
