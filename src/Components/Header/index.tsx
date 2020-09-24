@@ -47,12 +47,12 @@ const Header: React.FC = () => {
                 onChange={handleChange}
                 aria-label="disabled tabs example"
               >
-                <Link to="/">
+                <Link to="/covid">
                   <Tab label="Covid-19" />
                 </Link>
 
-                <Link to="/bar">
-                  <Tab label="Directory" />
+                <Link to="/">
+                  <Tab label="Main" />
                 </Link>
 
                 <Link to="/foo">
