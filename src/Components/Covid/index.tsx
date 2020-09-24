@@ -25,7 +25,7 @@ const CovidWrapper = () => {
                             
                             All Pennsylvanians have an important role to play in stopping the spread of COVID-19 and saving lives. Here are resources to help individuals, families, and businesses do their part.
 
-                            Keep checking back. This guide will be kept up to date as resources and information change. You can find up-to-date information about cases in Pennsylvania at on.pa.gov/coronavirus.`}
+                            Information change. You can find up-to-date information about cases in Pennsylvania at on.pa.gov/coronavirus.`}
                         </p>
                     </div>
                     <div className={classes.wrapperRight}>
