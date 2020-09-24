@@ -7,19 +7,11 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
-import Paper from "@material-ui/core/Paper";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
 
 import useStyles from "./style";
 
 const Header: React.FC = () => {
   const classes: any = useStyles();
-  const [value, setValue] = useState<number>(2);
-
-  const handleChange = (event: any, newValue: any) => {
-    setValue(newValue);
-  };
 
   return (
     <div className={classes.root}>
@@ -39,31 +31,12 @@ const Header: React.FC = () => {
             </Typography>
           </div>
           <div className={classes.right}>
-            <Paper square>
-              <Tabs
-                value={value}
-                indicatorColor="primary"
-                textColor="primary"
-                onChange={handleChange}
-                aria-label="disabled tabs example"
-              >
-                <Link to="/covid">
-                  <Tab label="Covid-19" />
-                </Link>
-
-                <Link to="/">
-                  <Tab label="Main" />
-                </Link>
-
-                <Link to="/foo">
-                  <Tab label="Feedback" />
-                </Link>
-
-                <Link to="/bar2">
-                  <Tab label="Translate" />
-                </Link>
-              </Tabs>
-            </Paper>
+            <div className={classes.headerLinks}>
+            <Link to="/covid">Covid-19</Link>
+            <Link to="/">Головна</Link>
+            <Link to="/foo">Feedback</Link>
+            <Link to="/bar2">Translate</Link>
+            </div>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
                 <SearchIcon />

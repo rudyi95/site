@@ -9,10 +9,6 @@ const useStyles = makeStyles((theme): any => ({
     "& .MuiPaper-root": {
       background: "#3f51b5",
       boxShadow: "none",
-
-      '& div': {
-          height: '100%',
-      },
     },
     '& .PrivateTabIndicator-colorPrimary-12': {
         background: 'white',
@@ -23,6 +19,25 @@ const useStyles = makeStyles((theme): any => ({
     '& .makeStyles-search-5': {
         height: 'auto !important',
     },
+    '& a': {
+        textDecoration: 'none',
+        padding: '0 0 0 74px',
+        color: 'white',
+    },
+    '& MuiTouchRipple-root': {
+      background: 'none',
+
+      '& span': {
+
+        '&:focus': {
+          background: 'none',
+        },
+      },
+    },
+  },
+  headerLinks: {
+    fontSize: '23px',
+    marginRight: '85px'
   },
   menuButton: {
     marginRight: theme.spacing(2),
