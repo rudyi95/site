@@ -6,6 +6,10 @@ const useStyles = makeStyles({
         maxWidth: '100vw',
         width: '100%',
         position: 'relative',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100%',
+        maxHeight: '100vh',
     }
 })
 
