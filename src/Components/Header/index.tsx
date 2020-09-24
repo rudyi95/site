@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
@@ -46,10 +47,21 @@ const Header: React.FC = () => {
                 onChange={handleChange}
                 aria-label="disabled tabs example"
               >
-                <Tab label="Covid-19" />
-                <Tab label="Directory" />
-                <Tab label="Feedback" />
-                <Tab label="Translate" />
+                <Link to="/">
+                  <Tab label="Covid-19" />
+                </Link>
+
+                <Link to="/bar">
+                  <Tab label="Directory" />
+                </Link>
+
+                <Link to="/foo">
+                  <Tab label="Feedback" />
+                </Link>
+
+                <Link to="/bar2">
+                  <Tab label="Translate" />
+                </Link>
               </Tabs>
             </Paper>
             <div className={classes.search}>
