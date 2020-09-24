@@ -12,11 +12,6 @@ import useStyles from "./style";
 
 const Header: React.FC = () => {
   const classes: any = useStyles();
-  const [value, setValue] = useState<number>(2);
-
-  const handleChange = (event: any, newValue: any) => {
-    setValue(newValue);
-  };
 
   return (
     <div className={classes.root}>
