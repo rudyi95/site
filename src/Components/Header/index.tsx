@@ -44,7 +44,7 @@ const Header: React.FC = () => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              News
+              Меню
             </Typography>
           </div>
           <div className={classes.right}>
