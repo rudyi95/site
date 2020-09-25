@@ -5,5 +5,9 @@ const useStyles = makeStyles((theme): any => ({
      '&:first-child > img': {
          width: '100%',
      },
+     
+    '&::-webkit-scrollbar': {
+        display: 'none',
+      },
  }}));
 export default useStyles;

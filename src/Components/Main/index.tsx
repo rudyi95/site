@@ -2,15 +2,17 @@ import React from "react";
 import useStyles from "./style";
 import Photo from "../../Img/photo.jpg";
 
+import InfoImage from '../Card';
+
 const Main: React.FC = () => {
   const classes: any = useStyles();
 
   return (
     <div className={classes.root}>
       <div className={classes.image}>
-        <img src={Photo} alt="Avatar" />
-        <img src={Photo} alt="Avatar" />
-        <img src={Photo} alt="Avatar" />
+        <InfoImage icon={Photo} text={'Ivanov Ivan'} />
+        <InfoImage icon={Photo} text={'Ivanov Ivan'} />
+        <InfoImage icon={Photo} text={'Ivanov Ivan'} />
       </div>
       <div className={classes.containerInfo}>
         Місто Жовква було закладене в 1597 р. на землях давньоруського поселення
@@ -81,9 +83,9 @@ const Main: React.FC = () => {
         </p>
       </div>
       <div className={classes.image}>
-        <img src={Photo} alt="Avatar" />
-        <img src={Photo} alt="Avatar" />
-        <img src={Photo} alt="Avatar" />
+        <InfoImage icon={Photo} text={'Ivanov Ivan'} />
+        <InfoImage icon={Photo} text={'Ivanov Ivan'} />
+        <InfoImage icon={Photo} text={'Ivanov Ivan'} />
       </div>
     </div>
   );

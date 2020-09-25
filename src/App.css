@@ -1,6 +1,9 @@
 body {
   margin: 0;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

@@ -49,10 +49,11 @@ const Header: React.FC = () => {
           </div>
           <div className={classes.right}>
             <div className={classes.headerLinks}>
-              <Link to="/covid">Covid-19</Link>
               <Link to="/">Головна</Link>
-              <Link to="/foo">Feedback</Link>
-              <Link to="/bar2">Translate</Link>
+              <Link to="/news">Новини</Link>
+              <Link to="/covid">Covid-19</Link>
+              <Link to="/registration">Реєстрація</Link>
+              <Link to="/translate">Переклад</Link>
             </div>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
