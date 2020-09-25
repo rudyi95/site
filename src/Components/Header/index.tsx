@@ -7,10 +7,26 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
+import {
+  Divider,
+  Drawer,
+  List,
+  ListItem,
+  ListItemIcon,
+} from "@material-ui/core";
+
+import ListItemText from "@material-ui/core/ListItemText";
+import InboxIcon from "@material-ui/icons/MoveToInbox";
+import MailIcon from "@material-ui/icons/Mail";
 
 import useStyles from "./style";
 
 const Header: React.FC = () => {
+  const [open, setOpen] = useState<boolean>(false);
+  const toggleDrawer = () => {
+    setOpen((open) => !open);
+  };
+
   const classes: any = useStyles();
 
   return (
@@ -23,6 +39,7 @@ const Header: React.FC = () => {
               className={classes.menuButton}
               color="inherit"
               aria-label="menu"
+              onClick={toggleDrawer}
             >
               <MenuIcon />
             </IconButton>
@@ -32,10 +49,10 @@ const Header: React.FC = () => {
           </div>
           <div className={classes.right}>
             <div className={classes.headerLinks}>
-            <Link to="/covid">Covid-19</Link>
-            <Link to="/">Головна</Link>
-            <Link to="/foo">Feedback</Link>
-            <Link to="/bar2">Translate</Link>
+              <Link to="/covid">Covid-19</Link>
+              <Link to="/">Головна</Link>
+              <Link to="/foo">Feedback</Link>
+              <Link to="/bar2">Translate</Link>
             </div>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
@@ -53,6 +70,49 @@ const Header: React.FC = () => {
           </div>
         </Toolbar>
       </AppBar>
+      <Drawer
+        className={classes.drawer}
+        variant="persistent"
+        anchor="left"
+        open={open}
+        classes={{
+          paper: classes.drawerPaper,
+        }}
+      >
+        <Divider />
+        <List>
+          {[
+            "Проблеми",
+            "Поточні проекти",
+            "Інфраструктура",
+            "Проєкти для інвесторів",
+            "Енергоефективність",
+            "Робота",
+            "Освіта",
+            "Медицина",
+            "Бізнес",
+          ].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <Link to="/"><ListItemText primary={text} /></Link>
+              
+            </ListItem>
+          ))}
+        </List>
+        <Divider />
+        <List>
+          {["Електронні сервіси", "Документообіг", "Тендери", "Голосування"].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
     </div>
   );
 };

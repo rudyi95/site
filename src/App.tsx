@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Header from "./Pages/Main";
-import MainPage from "./Pages/Main";
+import Header from "./Pages/MainPage";
+import MainPage from "./Pages/MainPage";
 
 import "./App.css";
 

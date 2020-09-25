@@ -1,5 +1,7 @@
 import { fade, makeStyles } from "@material-ui/core/styles";
 
+const drawerWidth = 240;
+
 const useStyles = makeStyles((theme): any => ({
   root: {
     "& .MuiToolbar-regular": {
@@ -10,34 +12,51 @@ const useStyles = makeStyles((theme): any => ({
       background: "#3f51b5",
       boxShadow: "none",
     },
-    '& .PrivateTabIndicator-colorPrimary-12': {
-        background: 'white',
+    "& .PrivateTabIndicator-colorPrimary-12": {
+      background: "white",
     },
-    '& .MuiTab-wrapper': {
-        color: 'white',
+    "& .MuiTab-wrapper": {
+      color: "white",
     },
-    '& .makeStyles-search-5': {
-        height: 'auto !important',
+    "& .makeStyles-search-5": {
+      height: "auto !important",
     },
-    '& a': {
-        textDecoration: 'none',
-        padding: '0 0 0 74px',
-        color: 'white',
-    },
-    '& MuiTouchRipple-root': {
-      background: 'none',
+    "& .MuiTouchRipple-root": {
+      background: "none",
 
-      '& span': {
-
-        '&:focus': {
-          background: 'none',
+      "& span": {
+        "&:focus": {
+          background: "none",
         },
+      },
+    },
+    '& .MuiList-padding': {
+      paddingTop: 0,
+    },
+    '& .MuiListItem-button': {
+      '&:hover': {
+        background: '#3f51b5',
+        color: 'white',
+        "& a": {
+          textDecoration: "none",
+          color: 'white',
+        },
+      },
+      "& a": {
+        textDecoration: "none",
+        color: 'black',
       },
     },
   },
   headerLinks: {
-    fontSize: '23px',
-    marginRight: '85px'
+    fontSize: "23px",
+    marginRight: "85px",
+
+    "& a": {
+      textDecoration: "none",
+      padding: "0 0 0 74px",
+      color: "white",
+    },
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -85,12 +104,60 @@ const useStyles = makeStyles((theme): any => ({
   left: {
     display: "flex",
     alignItems: "center",
-    height: '63px !important',
+    height: "63px !important",
   },
   right: {
     display: "flex",
     alignItems: "center",
-    height: '63px !important',
+    height: "63px !important",
+  },
+  appBar: {
+    transition: theme.transitions.create(["margin", "width"], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+  },
+  appBarShift: {
+    width: `calc(100% - ${drawerWidth}px)`,
+    marginLeft: drawerWidth,
+    transition: theme.transitions.create(["margin", "width"], {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  },
+  hide: {
+    display: "none",
+  },
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 0,
+  },
+  drawerPaper: {
+    width: drawerWidth,
+    background: 'white !important',
+    scrollbarWidth: 'none',
+    position: 'absolute',
+    top: '64px',
+    
+    '&::-webkit-scrollbar': {
+      display: 'none',
+    },
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
+    transition: theme.transitions.create("margin", {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    marginLeft: -drawerWidth,
+  },
+  contentShift: {
+    transition: theme.transitions.create("margin", {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+    marginLeft: 0,
   },
 }));
 
