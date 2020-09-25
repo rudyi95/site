@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme): any => ({
   image: {
     display: 'flex',
     flexDirection: 'column',
+    alighItems: 'center',
     width: '15%',
 
     '& img': {

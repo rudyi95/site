@@ -1,6 +1,6 @@
 import React from "react";
 import Welcome from "../../Components/Welcome";
-import Popular from '../../Components/Popular';
+import Main from '../../Components/Main';
 
 import useStyles from "./style";
 
@@ -10,7 +10,7 @@ const MainPage: React.FC = () => {
   return (
     <div className={classes.root}>
       <Welcome />
-      <Popular />
+      <Main />
     </div>
   );
 };

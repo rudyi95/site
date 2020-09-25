@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import { render } from 'react-dom';
-import {Bar2, Foo, Bar} from './Routes';
-import MainPage from './Pages/Main';
+import {Bar2, Bar} from './Routes';
+import MainPage from './Pages/MainPage';
 import Header from './Components/Header';
-import CovidPage from './Pages/Covid';
+import CovidPage from './Pages/CovidPage';
 
 import "./App.css";
 

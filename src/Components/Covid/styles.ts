@@ -1,81 +1,78 @@
-import { makeStyles } from '@material-ui/core';
-import { Height } from '@material-ui/icons';
-import CovidImage from '../../Img/covid.jpg'
+import { makeStyles } from "@material-ui/core";
+import CovidImage from "../../Img/covid.jpg";
 
 const useStyles = makeStyles({
-    wrapper: {
-        display: 'flex',
-        background: '#fff',
-        maxWidth: '100vw',
-        width: '100%',
-        height: '100vh',
-        backgroundImage: `url(${CovidImage})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        position: 'relative',
-    },
-    wrapperLeft: {
-        maxWidth: '65%',
-        width: '100%',
-    },
-    wrapperRight: {
-        maxWidth: '35%',
-        width: '100%',
+  wrapper: {
+    display: "flex",
+    background: "#fff",
+    maxWidth: "100vw",
+    width: "100%",
+    height: "100vh",
+    backgroundImage: `url(${CovidImage})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    position: "relative",
+  },
+  wrapperLeft: {
+    width: "80%",
+  },
+  wrapperRight: {
+    width: "30%",
+    display: "flex",
+    alignItems: "center",
+    paddingTop: "6vh",
+    flexDirection: "column",
+  },
 
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        // justifyContent: 'center',
-        paddingTop: '40px',
-    },
+  wrapperInfo: {
+    top: "50%",
+    left: "50%",
+    width: "80%",
+    height: "60%",
+    display: "flex",
+    padding: "30px",
+    position: "absolute",
+    transform: "translate(-50%, -50%)",
+    background: "#fff",
+  },
+  headerWrapperInfo: {
+    fontSize: "2.44vh",
+  },
+  title: {
+    margin: 0,
+    fontSize: "4.5vh",
+    lineHeight: 1.5,
+    paddingTop: "10px",
+    paddingBottom: "0px",
+  },
+  dateText: {
+    color: "red",
+    fontStyle: "italic",
+    fontSize: "2.5vh",
+  },
+  description: {
+    fontSize: "3.04vh",
+  },
+  buttonsGuide: {
+    width: "21vw",
+    border: 0,
+    padding: "1.52vh",
+    textAlign: "left",
+    fontSize: "2vh",
+    backgroundColor: "transparent",
 
-    wrapperInfo: {
-        background: '#fff',
-        display: 'flex',
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        maxWidth: '70vw',
-        width: '100%',
-        padding: '30px',
+    "& :hover": {
+      border: "2px solid blue",
     },
-    headerWrapperInfo: {},
-    title: {
-        fontSize: '46px',
-        margin: 0,
-        lineHeight: 1.5,
-        paddingTop: '10px',
-        paddingBottom: '0px',
-    },
-    dateText: {
-        color: 'red',
-        fontStyle: 'italic'
-    },
-    description: {
-        lineHeight: 1.2,
-        fontSize: '20px'
-    },
-    buttonsGuide: {
-        padding: '10px',
-        margin: 0,
-        border: 0,
-        backgroundColor: 'transparent',
-        '& :hover': {
-            border: '2px solid blue',
-        },
-        display: 'block',
-        width: '201px',
-        textAlign: 'left', 
-    },
-    guide: {
-        padding: '10px',
-        backgroundColor: 'blue',
-        textAlign: 'left',
-        width: '200px',
-        color: '#fff',
-    }
-
-})
+  },
+  guide: {
+    color: "#fff",
+    width: "21vw",
+    padding: "1.5vh 0 1.5vh 1vh",
+    textAlign: "start",
+    fontSize: "1.6vw",
+    backgroundColor: "blue",
+  },
+});
 
 export default useStyles;
