@@ -5,7 +5,6 @@ const useStyles = makeStyles((theme): any => ({
     display: "flex",
     justifyContent: "center",
     width: "100%",
-    height: "480px",
   },
   image: {
     display: 'flex',
