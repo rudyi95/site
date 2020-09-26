@@ -1,6 +1,6 @@
 import React from "react";
-import Welcome from "../../Components/Welcome";
-import Main from '../../Components/Main';
+import PictureBlock from "../../Components/PictureBlock";
+import Main from "../../Components/Main";
 
 import useStyles from "./style";
 
@@ -9,7 +9,7 @@ const NewsPage: React.FC = () => {
 
   return (
     <div className={classes.root}>
-      <Welcome />
+      <PictureBlock text={"ЖОВКВА - інноваційна громада"} />
       <Main />
     </div>
   );

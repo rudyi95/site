@@ -2,15 +2,19 @@ import React from "react";
 import welcome from "../../Img/Welcome.jpg";
 import useStyles from "./style";
 
-const WelcomeImg: React.FC = () => {
+declare interface PictureBlockProps {
+  text: String;
+}
+
+const PictureBlock: React.FC<PictureBlockProps> = ({ text }) => {
   const classes: any = useStyles();
 
   return (
     <div className={classes.root}>
       <img src={welcome} alt="" />
-      <span>ЖОВКВА - інноваційна громада</span>
+      <span>{text}</span>
     </div>
   );
 };
 
-export default WelcomeImg;
+export default PictureBlock;

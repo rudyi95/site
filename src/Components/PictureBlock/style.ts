@@ -10,9 +10,11 @@ const useStyles = makeStyles((theme): any => ({
          width: '100%',
      },
      '& span': {
+         width: '100%',
+         textAlign: 'center',
+         top: '25%',
          position: 'absolute',
          fontSize: '3vw',
-         margin: '6% 0 0 29%',
          fontFamily: `'Roboto', sans-serif`,
      },
  },
