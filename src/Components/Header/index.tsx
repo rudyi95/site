@@ -33,13 +33,12 @@ const Header: React.FC = () => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <div className={classes.left}>
+          <div className={classes.left} onClick={toggleDrawer}>
             <IconButton
               edge="start"
               className={classes.menuButton}
               color="inherit"
               aria-label="menu"
-              onClick={toggleDrawer}
             >
               <MenuIcon />
             </IconButton>
@@ -97,14 +96,20 @@ const Header: React.FC = () => {
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
-              <Link to="/"><ListItemText primary={text} /></Link>
-              
+              <Link to="/">
+                <ListItemText primary={text} />
+              </Link>
             </ListItem>
           ))}
         </List>
         <Divider />
         <List>
-          {["Електронні сервіси", "Документообіг", "Тендери", "Голосування"].map((text, index) => (
+          {[
+            "Електронні сервіси",
+            "Документообіг",
+            "Тендери",
+            "Голосування",
+          ].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}

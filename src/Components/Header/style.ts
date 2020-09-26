@@ -122,6 +122,7 @@ const useStyles = makeStyles((theme): any => ({
     display: "flex",
     alignItems: "center",
     height: "63px !important",
+    cursor: 'pointer',
   },
   right: {
     display: "flex",
