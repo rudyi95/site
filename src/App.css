@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -33,3 +34,5 @@ body::-webkit-scrollbar {
     transform: rotate(360deg);
   }
 }
+
+
