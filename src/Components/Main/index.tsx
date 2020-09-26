@@ -2,7 +2,7 @@ import React from "react";
 import useStyles from "./style";
 import Photo from "../../Img/photo.jpg";
 
-import InfoImage from '../Card';
+import InfoImage from '../InfoCards/Card';
 
 const Main: React.FC = () => {
   const classes: any = useStyles();

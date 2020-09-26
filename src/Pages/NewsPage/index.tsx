@@ -1,6 +1,6 @@
 import React from "react";
 import Welcome from "../../Components/Welcome";
-import Main from '../../Components/Main';
+import News from '../../Components/News';
 
 import useStyles from "./style";
 
@@ -10,7 +10,7 @@ const NewsPage: React.FC = () => {
   return (
     <div className={classes.root}>
       <Welcome />
-      <Main />
+      <News />
     </div>
   );
 };

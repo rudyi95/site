@@ -11,8 +11,8 @@ const useStyles = makeStyles((theme): any => ({
      },
      '& span': {
          position: 'absolute',
-         fontSize: '3em',
-         margin: '6% 0 0 31%',
+         fontSize: '3vw',
+         margin: '6% 0 0 29%',
          fontFamily: `'Roboto', sans-serif`,
      },
  },
