@@ -13,13 +13,12 @@ const useStyles = makeStyles((theme): any => ({
       justifyContent: "space-between",
     },
     "& .MuiPaper-root": {
-      // background: "#3f51b5",
-      backgroundColor: 'white',
-      color: '#3f51b5',
-      position: 'fixed',
-      border: '2px solid #3f51b5',
-      borderRadius: '5px',
-      boxShadow: '0px 5px 10px 0px rgba(0,0,0,0.25)',
+      backgroundColor: "white",
+      color: "#3f51b5",
+      position: "fixed",
+      border: "2px solid #3f51b5",
+      borderRadius: "5px",
+      boxShadow: "0px 5px 10px 0px rgba(0,0,0,0.25)",
     },
     "& .PrivateTabIndicator-colorPrimary-12": {
       background: "white",
@@ -48,9 +47,10 @@ const useStyles = makeStyles((theme): any => ({
         color: "white",
         "& a": {
           textDecoration: "none",
-          // color: "white",
-          color: '#3f51b5',
-
+          color: "#3f51b5",
+        },
+        "& .MuiTypography-displayBlock": {
+          color: "white",
         },
       },
       "& a": {
@@ -60,19 +60,47 @@ const useStyles = makeStyles((theme): any => ({
     },
   },
   headerLinks: {
+    position: "relative",
     fontSize: "18px",
-    transition: '0.5s',
-    '& :hover': {
-      fontSize: '19px',
-    },
+    transition: "0.5s",
+    cursor: "pointer",
 
     "& a": {
       textDecoration: "none",
       padding: "0 0 0 30px",
-      // color: "white",
-      color: '#3f51b5',
+      color: "#3f51b5",
 
+      "&:hover": {
+        fontSize: "19px",
+      },
+    },
+  },
+  changeLanguage: {
+    position: "absolute",
+    right: 0,
+    top: "2.5em",
+    background: "wheat",
+    border: "1px black solid",
+    borderRadius: "5px",
+    transitionDuration: "0ms",
+  },
+  languageList: {
+    display: "flex",
+    flexDirection: "column",
+    fontSize: "17px",
 
+    "&:hover": {
+      fontSize: "17px",
+    },
+    "& span": {
+      display: "flex",
+      justifyContent: "space-between",
+      margin: "10px",
+
+      "& svg": {
+        width: "30px",
+        marginLeft: "50px",
+      },
     },
   },
   menuButton: {
@@ -122,7 +150,7 @@ const useStyles = makeStyles((theme): any => ({
     display: "flex",
     alignItems: "center",
     height: "63px !important",
-    cursor: 'pointer',
+    cursor: "pointer",
   },
   right: {
     display: "flex",

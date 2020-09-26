@@ -6,6 +6,7 @@ import MainPage from "./Pages/MainPage";
 import Header from "./Components/Header";
 import CovidPage from "./Pages/CovidPage";
 import NewsPage from "./Pages/NewsPage";
+import ProblemsPage from './Pages/ProblemsPage';
 
 import "./App.css";
 
@@ -22,6 +23,7 @@ class App extends React.Component {
             <Route exact path="/news" component={NewsPage} />
             <Route exact path="/registration" component={Bar2} />
             <Route exact path="/translate" component={Bar2} />
+            <Route exact path="/problems" component={ProblemsPage} />
           </Switch>
         </div>
       </Router>
