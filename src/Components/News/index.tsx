@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import NewsCard from "../InfoCards/NewsCard";
+import LinkLine from "../LinkLine";
 
 import Photo from "../../Img/newsImage.jpg";
 
@@ -13,9 +13,7 @@ const News: React.FC = () => {
   return (
     <div className={classes.root}>
       <div className={classes.headerWrapperInfo}>
-        <Link to="/">Home</Link>
-        <span> {">"} </span>
-        <span>Новини</span>
+        <LinkLine links={['Новини']} />
       </div>
       <div className={classes.image}>
         <NewsCard

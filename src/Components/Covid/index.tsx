@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import LinkLine from "../LinkLine";
 
 import useStyles from "./styles";
 
@@ -27,9 +27,7 @@ const CovidWrapper = () => {
       <div className={classes.wrapperInfo}>
         <div className={classes.wrapperLeft}>
           <div className={classes.headerWrapperInfo}>
-            <Link to="/">Home</Link>
-            <span> {">"} </span>
-            <span>Responding to COVID-19</span>
+            <LinkLine links={["Responding to COVID-19"]} />
           </div>
           <h2 className={classes.title}>
             Responding to COVID-19 in Pennsylvania
