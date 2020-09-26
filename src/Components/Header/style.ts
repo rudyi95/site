@@ -54,7 +54,11 @@ const useStyles = makeStyles((theme): any => ({
     },
   },
   headerLinks: {
-    fontSize: "23px",
+    fontSize: "18px",
+    transition: '0.5s',
+    '& :hover': {
+      fontSize: '19px',
+    },
 
     "& a": {
       textDecoration: "none",
