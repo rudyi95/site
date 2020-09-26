@@ -14,17 +14,25 @@ import {
   ListItem,
   ListItemIcon,
 } from "@material-ui/core";
-
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 
+import { ReactComponent as Ukraine } from "../../Img/Flags/ukraine.svg";
+import { ReactComponent as Poland } from "../../Img/Flags/poland.svg";
+import { ReactComponent as UnitedKingdom } from "../../Img/Flags/united-kingdom.svg";
+
 import useStyles from "./style";
 
 const Header: React.FC = () => {
-  const [open, setOpen] = useState<boolean>(false);
+  const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
+  const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
   const toggleDrawer = () => {
-    setOpen((open) => !open);
+    setIsOpenMenu(!isOpenMenu);
+  };
+  const handleClick = () => {
+    setIsCollapsed(!isCollapsed);
   };
 
   const classes: any = useStyles();
@@ -48,11 +56,44 @@ const Header: React.FC = () => {
           </div>
           <div className={classes.right}>
             <div className={classes.headerLinks}>
-              <Link to="/">Головна</Link>
-              <Link to="/news">Новини</Link>
-              <Link to="/covid">Covid-19</Link>
-              <Link to="/registration">Реєстрація</Link>
-              <Link to="/translate">Переклад</Link>
+              <Link to="/">
+                <span>Головна</span>
+              </Link>
+              <Link to="/news">
+                <span>Новини</span>
+              </Link>
+              <Link to="/covid">
+                <span>Covid-19</span>
+              </Link>
+              <Link to="/registration">
+                <span>Реєстрація</span>
+              </Link>
+              <a
+                onClick={handleClick}
+                href={`${window.location.href}`}
+                rel="noopener noreferrer"
+              >
+                Переклад
+              </a>
+              {!isCollapsed && (
+                <ClickAwayListener
+                  onClickAway={() => setIsCollapsed(!isCollapsed)}
+                >
+                  <div className={classes.changeLanguage}>
+                    <div className={classes.languageList}>
+                      <span onClick={() => setIsCollapsed(!isCollapsed)}>
+                        Українська <Ukraine />
+                      </span>
+                      <span onClick={() => setIsCollapsed(!isCollapsed)}>
+                        English <UnitedKingdom />
+                      </span>
+                      <span onClick={() => setIsCollapsed(!isCollapsed)}>
+                        Polskie <Poland />
+                      </span>
+                    </div>
+                  </div>
+                </ClickAwayListener>
+              )}
             </div>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
@@ -70,55 +111,59 @@ const Header: React.FC = () => {
           </div>
         </Toolbar>
       </AppBar>
-      <Drawer
-        className={classes.drawer}
-        variant="persistent"
-        anchor="left"
-        open={open}
-        classes={{
-          paper: classes.drawerPaper,
-        }}
-      >
-        <Divider />
-        <List>
-          {[
-            "Проблеми",
-            "Поточні проекти",
-            "Інфраструктура",
-            "Проєкти для інвесторів",
-            "Енергоефективність",
-            "Робота",
-            "Освіта",
-            "Медицина",
-            "Бізнес",
-          ].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <Link to="/">
-                <ListItemText primary={text} />
-              </Link>
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {[
-            "Електронні сервіси",
-            "Документообіг",
-            "Тендери",
-            "Голосування",
-          ].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
+      {isOpenMenu && (
+        <ClickAwayListener onClickAway={() => setIsOpenMenu(!isOpenMenu)}>
+          <Drawer
+            className={classes.drawer}
+            variant="persistent"
+            anchor="left"
+            open={isOpenMenu}
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+          >
+            <Divider />
+            <List>
+              {[
+                ["Проблеми", "problems"],
+                ["Поточні проекти", "curent_projects"],
+                ["Інфраструктура", "infrastructure"],
+                ["Проєкти для інвесторів", "projects_for_investors"],
+                ["Енергоефективність", "energy_efficiency"],
+                ["Робота", "work"],
+                ["Освіта", "education"],
+                ["Медицина", "medicine"],
+                ["Бізнес", "business"],
+              ].map((text, index) => (
+                <ListItem button>
+                  <ListItemIcon>
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                  <Link to={`/${text[1]}`}>
+                    <ListItemText>{text[0]}</ListItemText>
+                  </Link>
+                </ListItem>
+              ))}
+            </List>
+            <Divider />
+            <List>
+              {[
+                "Електронні сервіси",
+                "Документообіг",
+                "Тендери",
+                "Голосування",
+              ].map((text, index) => (
+                <ListItem button key={text}>
+                  <ListItemIcon>
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItem>
+              ))}
+            </List>
+          </Drawer>
+        </ClickAwayListener>
+      )}
     </div>
   );
 };
