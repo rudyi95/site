@@ -13,9 +13,13 @@ const useStyles = makeStyles((theme): any => ({
       justifyContent: "space-between",
     },
     "& .MuiPaper-root": {
-      background: "#3f51b5",
-      boxShadow: "none",
+      // background: "#3f51b5",
+      backgroundColor: 'white',
+      color: '#3f51b5',
       position: 'fixed',
+      border: '2px solid #3f51b5',
+      borderRadius: '5px',
+      boxShadow: '0px 5px 10px 0px rgba(0,0,0,0.25)',
     },
     "& .PrivateTabIndicator-colorPrimary-12": {
       background: "white",
@@ -44,7 +48,9 @@ const useStyles = makeStyles((theme): any => ({
         color: "white",
         "& a": {
           textDecoration: "none",
-          color: "white",
+          // color: "white",
+          color: '#3f51b5',
+
         },
       },
       "& a": {
@@ -63,7 +69,10 @@ const useStyles = makeStyles((theme): any => ({
     "& a": {
       textDecoration: "none",
       padding: "0 0 0 30px",
-      color: "white",
+      // color: "white",
+      color: '#3f51b5',
+
+
     },
   },
   menuButton: {
