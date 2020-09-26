@@ -15,8 +15,6 @@ const useStyles = makeStyles((theme): any => ({
          top: '25%',
          position: 'absolute',
          fontSize: '3vw',
-         margin: '6% 0 0 29%',
-        //  fontFamily: `'Roboto', sans-serif`,
          fontFamily: 'Caveat',
      },
  },
