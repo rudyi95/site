@@ -29,8 +29,6 @@ const CovidWrapper = () => {
           <div className={classes.headerWrapperInfo}>
             <Link to="/">Home</Link>
             <span> {">"} </span>
-            <Link to="/feedback">Feedback</Link>
-            <span>{">"}</span>
             <span>Responding to COVID-19</span>
           </div>
           <h2 className={classes.title}>
