@@ -12,6 +12,16 @@ const CovidWrapper = () => {
     "For Individuals",
     "Resourses for Businesses",
   ];
+
+  /**
+   * @description: textToDescription - hardcode text. it will come from props
+   */
+  const textToDescription = [
+        'COVID-19 is a new virus that causes respiratory illness in people and can spread from person-to-person.',
+        'All Pennsylvanians have an important role to play in stopping the spread of COVID-19 and saving lives. Here are resources to help individuals, families, and businesses do their part.',
+        'Information change. You can find up-to-date information about cases in Pennsylvania at on.pa.gov/coronavirus.',
+    ]
+
   return (
     <div className={classes.wrapper}>
       <div className={classes.wrapperInfo}>
@@ -25,13 +35,7 @@ const CovidWrapper = () => {
           <p className={classes.dateText}>
             Last updated 4:00 p.m., September 23, 2020
           </p>
-          <p className={classes.description}>
-            {`COVID-19 is a new virus that causes respiratory illness in people and can spread from person-to-person.
-                            
-                            All Pennsylvanians have an important role to play in stopping the spread of COVID-19 and saving lives. Here are resources to help individuals, families, and businesses do their part.
-
-                            Information change. You can find up-to-date information about cases in Pennsylvania at on.pa.gov/coronavirus.`}
-          </p>
+          {textToDescription.map(text => <p className={classes.description}>{text}</p>)}
         </div>
         <div className={classes.wrapperRight}>
           <div className={classes.guide}>In this guide</div>

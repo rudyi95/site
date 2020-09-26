@@ -8,14 +8,14 @@ import "./App.css";
 
 const App: React.FC = () => {
   return (
-    <Router>
-        <Header />
-        <Switch>
-          <Route path="/">
-            <MainPage />
-          </Route>
-        </Switch>
-    </Router>
+      <Router>
+          <Header />
+          <Switch>
+            <Route path="/">
+              <MainPage />
+            </Route>
+          </Switch>
+      </Router>
   );
 };
 
