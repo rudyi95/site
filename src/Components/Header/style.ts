@@ -4,6 +4,10 @@ const drawerWidth = 240;
 
 const useStyles = makeStyles((theme): any => ({
   root: {
+    position: "fixed",
+    width: "100%",
+    zIndex: "1000",
+
     "& .MuiToolbar-regular": {
       display: "flex",
       justifyContent: "space-between",
@@ -11,6 +15,7 @@ const useStyles = makeStyles((theme): any => ({
     "& .MuiPaper-root": {
       background: "#3f51b5",
       boxShadow: "none",
+      position: 'fixed',
     },
     "& .PrivateTabIndicator-colorPrimary-12": {
       background: "white",
@@ -30,31 +35,30 @@ const useStyles = makeStyles((theme): any => ({
         },
       },
     },
-    '& .MuiList-padding': {
+    "& .MuiList-padding": {
       paddingTop: 0,
     },
-    '& .MuiListItem-button': {
-      '&:hover': {
-        background: '#3f51b5',
-        color: 'white',
+    "& .MuiListItem-button": {
+      "&:hover": {
+        background: "#3f51b5",
+        color: "white",
         "& a": {
           textDecoration: "none",
-          color: 'white',
+          color: "white",
         },
       },
       "& a": {
         textDecoration: "none",
-        color: 'black',
+        color: "black",
       },
     },
   },
   headerLinks: {
     fontSize: "23px",
-    marginRight: "85px",
 
     "& a": {
       textDecoration: "none",
-      padding: "0 0 0 74px",
+      padding: "0 0 0 30px",
       color: "white",
     },
   },
@@ -134,13 +138,13 @@ const useStyles = makeStyles((theme): any => ({
   },
   drawerPaper: {
     width: drawerWidth,
-    background: 'white !important',
-    scrollbarWidth: 'none',
-    position: 'absolute',
-    top: '64px',
-    
-    '&::-webkit-scrollbar': {
-      display: 'none',
+    background: "white !important",
+    scrollbarWidth: "none",
+    position: "absolute",
+    top: "64px",
+
+    "&::-webkit-scrollbar": {
+      display: "none",
     },
   },
   content: {
