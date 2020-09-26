@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme): any => ({
          position: 'absolute',
          fontSize: '3vw',
          margin: '6% 0 0 29%',
-         fontFamily: `'Roboto', sans-serif`,
+        //  fontFamily: `'Roboto', sans-serif`,
+         fontFamily: 'Caveat',
      },
  },
 }));
