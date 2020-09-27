@@ -75,7 +75,7 @@ const Header: React.FC = () => {
               >
                 Переклад
               </a>
-              {!isCollapsed && (
+              {isCollapsed && (
                 <ClickAwayListener
                   onClickAway={() => setIsCollapsed(!isCollapsed)}
                 >
