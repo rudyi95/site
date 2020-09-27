@@ -7,6 +7,8 @@ import Header from "./Components/Header";
 import CovidPage from "./Pages/CovidPage";
 import NewsPage from "./Pages/NewsPage";
 import ProblemsPage from './Pages/ProblemsPage';
+import CurrentProjectsPage from './Pages/CurrentProjectsPage';
+import ProjectsForInvestors from './Pages/ProjectsForInvestors';
 
 import "./App.css";
 
@@ -22,8 +24,9 @@ class App extends React.Component {
             <Route exact path="/covid" component={CovidPage} />
             <Route exact path="/news" component={NewsPage} />
             <Route exact path="/registration" component={Bar2} />
-            <Route exact path="/translate" component={Bar2} />
             <Route exact path="/problems" component={ProblemsPage} />
+            <Route exact path="/curent_projects" component={CurrentProjectsPage} />
+            <Route exact path="/projects_for_investors" component={ProjectsForInvestors} />
           </Switch>
         </div>
       </Router>
