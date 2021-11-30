@@ -1,7 +1,7 @@
 import React from "react";
 
 import CovidWrapper from "../../Components/Covid";
-import useStyles from "./styles";
+import useStyles from "./style";
 
 const CovidPage: React.FC = () => {
   const classes: any = useStyles();
